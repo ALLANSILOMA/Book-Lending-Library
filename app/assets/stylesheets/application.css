@@ -1,0 +1,151 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+@import "application";
+
+.card {
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.sidebar {
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.nav-link {
+    font-size: 18px;
+}
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: #333;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    background-color: #e7e7e7;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #d4d4d4;
+}
+
+main {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+    margin-bottom: 1rem;
+}
+
+.dashboard-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.stat {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 4px;
+    width: 30%;
+    text-align: center;
+}
+
+.dashboard-recent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recent-books,
+.recent-lendings {
+    width: 48%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th,
+td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #777;
+}
+

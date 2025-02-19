@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Lending Library</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true %>
+  </head>
+
+  <body>
+    <header>
+      <h1>Book Lending Library</h1>
+      <nav>
+        <%= link_to 'Dashboard', dashboard_path %>
+        <%= link_to 'Books', books_path %>
+        <%= link_to 'New Book', new_book_path %>
+      </nav>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <p>&copy; <%= Time.current.year %> Book Lending Library</p>
+    </footer>
+  </body>
+</html>

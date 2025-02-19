@@ -1,0 +1,43 @@
+<h1><%= @book.title %></h1>
+
+<p><strong>Author:</strong> <%= @book.author %></p>
+<p><strong>ISBN:</strong> <%= @book.isbn %></p>
+<p><strong>Description:</strong> <%= @book.description %></p>
+
+<h2>Lending History</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Borrower</th>
+      <th>Borrowed At</th>
+      <th>Returned At</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @borrowings.each do |borrowing| %>
+      <tr>
+        <td><%= borrowing.borrower_name %></td>
+        <td><%= borrowing.borrowed_at.strftime("%Y-%m-%d") %></td>
+        <td><%= borrowing.returned_at %></td>
+        <td>
+          <% if borrowing.returned_at.nil? %>
+            <%= button_to 'Return', borrowing_path(borrowing), method: :patch %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h3>Borrow this book</h3>
+<%= form_with(model: [@book, Borrowing.new], local: true) do |form| %>
+  <%= form.label :borrower_name %>
+  <%= form.text_field :borrower_name, required: true %>
+  <%= form.submit 'Borrow' %>
+<% end %>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back to Books', books_path %>
+

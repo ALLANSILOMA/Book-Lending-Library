@@ -1,0 +1,42 @@
+<h1>Book Borrowing Library Dashboard</h1>
+
+<div class="dashboard-stats">
+  <div class="stat">
+    <h2>Total Books</h2>
+    <p><%= @total_books %></p>
+  </div>
+  <div class="stat">
+    <h2>Total borrowings</h2>
+    <p><%= @total_borrowings %></p>
+  </div>
+  <div class="stat">
+    <h2>Current Borrowings</h2>
+    <p><%= @current_borrowings %></p>
+  </div>
+</div>
+
+<div class="dashboard-recent">
+  <div class="recent-books">
+    <h2>Recent Books</h2>
+    <ul>
+      <% @recent_books.each do |book| %>
+        <li><%= link_to book.title, book_path(book) %> by <%= book.author %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="recent-borrowings">
+    <h2>Recent Borrowings</h2>
+    <ul>
+      <% @recent_borrowings.each do |borrowing| %>
+        <li>
+          <%= borrowing.book.title %> borrowed by <%= borrowing.borrower_name %>
+          on <%= borrowing.borrowed_at.to_date %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<%= link_to 'View All Books', books_path %>
+
