@@ -11,22 +11,28 @@ A simple book lending library application built using Ruby on Rails 8. This appl
 
 ## Screenshots
 ### 1. Add a New Book
-_(Insert Screenshot Here)_
+![ADD NEW BOOK](https://github.com/user-attachments/assets/265126b2-44d5-4c47-be63-f8863535300b)
+
 
 ### 2. Edit a Book
-_(Insert Screenshot Here)_
+![EDIT BOOK](https://github.com/user-attachments/assets/d993891b-4b7a-4264-94db-50934d763764)
+
 
 ### 3. View All Books
-_(Insert Screenshot Here)_
+![VIEW ALL BOOKS](https://github.com/user-attachments/assets/92812d3b-489c-42ce-bc78-e6d68458518c)
+
 
 ### 4. View Individual Book Details (including borrow & return history)
-_(Insert Screenshot Here)_
+![INDIVIDUAL BOOK DETAILS(INCLUDING  BORROW RETURN HISTORY)](https://github.com/user-attachments/assets/a20e2070-e44f-4389-8898-0ea3fcd0b8ac)
+
 
 ### 5. Borrow a Book
-_(Insert Screenshot Here)_
+![BORROW A BOOK](https://github.com/user-attachments/assets/8a3c37dd-2a81-4d58-8840-9dea32d58b4d)
+
 
 ### 6. Return a Book
-_(Insert Screenshot Here)_
+![RETURN A BOOK](https://github.com/user-attachments/assets/4bb414e3-fe0c-49be-834f-a443b03af1ee)
+
 
 ## Installation & Setup
 
