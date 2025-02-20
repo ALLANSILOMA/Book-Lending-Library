@@ -1,6 +1,7 @@
 class BorrowingsController < ApplicationController
+  before_action :set_book, only: [:create]
+
   def create
-    @book = Book.find(params[:book_id])
     @borrowing = @book.borrowings.new(borrowing_params)
     @borrowing.borrowed_at = Time.current
 
@@ -12,7 +13,7 @@ class BorrowingsController < ApplicationController
   end
 
   def update
-    @borrowing = borrowing.find(params[:id])
+    @borrowing = Borrowing.find(params[:id])
     @borrowing.returned_at = Time.current
 
     if @borrowing.save
@@ -23,13 +24,16 @@ class BorrowingsController < ApplicationController
   end
 
   def borrower_history
-    @borrowings = borrowing.where(borrower_name: params[:borrower_name]).includes(:book)
+    @borrowings = Borrowing.where(borrower_name: params[:borrower_name]).includes(:book)
   end
 
   private
+
+  def set_book
+    @book = Book.find(params[:book_id])
+  end
 
   def borrowing_params
     params.require(:borrowing).permit(:borrower_name)
   end
 end
-
